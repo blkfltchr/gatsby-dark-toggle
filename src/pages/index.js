@@ -10,11 +10,13 @@ import SEO from '../components/seo'
 const darkTheme = {
   color: 'blue',
   headerColor: 'LightBlue',
+  backgroundColor: 'DarkBlue'
 }
 
 const lightTheme = {
   color: 'red',
   headerColor: 'Tomato',
+  backgroundColor: 'DarkRed'
 }
 
 const StyledP = styled.p`
@@ -23,6 +25,12 @@ const StyledP = styled.p`
 
 const StyledH1 = styled.h1`
   color: ${props => props.theme.headerColor};
+`
+
+const StyledDiv = styled.div`
+  background: ${props => props.theme.backgroundColor};
+  padding: 40px 120px;
+  margin: 0 auto;
 `
 
 class IndexPage extends Component {
@@ -42,19 +50,21 @@ class IndexPage extends Component {
     return (
       <ThemeProvider theme={this.state.dark ? darkTheme : lightTheme}>
         <Layout>
-          <div className="tg-list-item">
-            <input onClick={this.onDarkToggle} className="tgl tgl-skewed" id="cb3" type="checkbox"/>
-            <label className="tgl-btn" data-tg-off="DARK" data-tg-on="LIGHT" htmlFor="cb3"></label>
-          </div>
-          <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-          <StyledH1>Hi people</StyledH1>
-          <StyledP>Welcome to your new Gatsby site.</StyledP>
-          <StyledP>Now go build something great.</StyledP>
-          <StyledP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</StyledP>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-            <Image />
-          </div>
-          <Link to="/page-2/">Go to page 2</Link>
+          <StyledDiv>
+            <div className="tg-list-item">
+              <input onClick={this.onDarkToggle} className="tgl tgl-skewed" id="cb3" type="checkbox"/>
+              <label className="tgl-btn" data-tg-off="DARK" data-tg-on="LIGHT" htmlFor="cb3"></label>
+            </div>
+            <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+            <StyledH1>Hi people</StyledH1>
+            <StyledP>Welcome to your new Gatsby site.</StyledP>
+            <StyledP>Now go build something great.</StyledP>
+            <StyledP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</StyledP>
+            <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+              <Image />
+            </div>
+            <Link to="/page-2/">Go to page 2</Link>
+          </StyledDiv>
         </Layout>
       </ThemeProvider>
     )
