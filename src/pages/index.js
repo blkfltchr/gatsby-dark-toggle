@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 import './index.css'
 
@@ -63,7 +62,6 @@ class IndexPage extends Component {
             <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
               <Image />
             </div>
-            <Link style={{color: 'white'}}to="/page-2/">Go to page 2</Link>
           </StyledDiv>
         </Layout>
       </ThemeProvider>
