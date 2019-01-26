@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
+import './index.css'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
@@ -35,8 +36,11 @@ class IndexPage extends Component {
     return (
       <ThemeProvider theme={this.state.dark ? theme : newTheme}>
         <Layout>
+          <div className="tg-list-item">
+            <input onClick={this.onDarkToggle} className="tgl tgl-skewed" id="cb3" type="checkbox"/>
+            <label className="tgl-btn" data-tg-off="BLUE" data-tg-on="RED" htmlFor="cb3"></label>
+          </div>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-          <button onClick={this.onDarkToggle}>Toggle me</button>
           <h1>Hi people</h1>
           <p>Welcome to your new Gatsby site.</p>
           <p>Now go build something great.</p>
