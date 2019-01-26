@@ -7,16 +7,22 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-const theme = {
+const darkTheme = {
   color: 'blue',
+  headerColor: 'LightBlue',
 }
 
-const newTheme = {
+const lightTheme = {
   color: 'red',
+  headerColor: 'Tomato',
 }
 
-const Blue = styled.p`
+const StyledP = styled.p`
   color: ${props => props.theme.color};
+`
+
+const StyledH1 = styled.h1`
+  color: ${props => props.theme.headerColor};
 `
 
 class IndexPage extends Component {
@@ -34,17 +40,17 @@ class IndexPage extends Component {
   render() {
     console.log(this.state)
     return (
-      <ThemeProvider theme={this.state.dark ? theme : newTheme}>
+      <ThemeProvider theme={this.state.dark ? darkTheme : lightTheme}>
         <Layout>
           <div className="tg-list-item">
             <input onClick={this.onDarkToggle} className="tgl tgl-skewed" id="cb3" type="checkbox"/>
-            <label className="tgl-btn" data-tg-off="BLUE" data-tg-on="RED" htmlFor="cb3"></label>
+            <label className="tgl-btn" data-tg-off="DARK" data-tg-on="LIGHT" htmlFor="cb3"></label>
           </div>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-          <h1>Hi people</h1>
-          <p>Welcome to your new Gatsby site.</p>
-          <p>Now go build something great.</p>
-          <Blue>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Blue>
+          <StyledH1>Hi people</StyledH1>
+          <StyledP>Welcome to your new Gatsby site.</StyledP>
+          <StyledP>Now go build something great.</StyledP>
+          <StyledP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</StyledP>
           <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
             <Image />
           </div>
