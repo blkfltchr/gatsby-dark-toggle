@@ -53,7 +53,7 @@ class IndexPage extends Component {
           <StyledDiv>
             <div className="tg-list-item">
               <input onClick={this.onDarkToggle} className="tgl tgl-skewed" id="cb3" type="checkbox"/>
-              <label className="tgl-btn" data-tg-off="DARK" data-tg-on="LIGHT" htmlFor="cb3"></label>
+              <label className="tgl-btn" data-tg-off="🌚" data-tg-on="🌞" htmlFor="cb3"></label>
             </div>
             <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
             <StyledH1>Hi people</StyledH1>

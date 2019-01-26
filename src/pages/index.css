@@ -65,7 +65,7 @@ html, body {
     backface-visibility: hidden;
     transition: all 0.2s ease;
     font-family: sans-serif;
-    background: blue;
+    background: lavender;
   }
   .tgl-skewed + .tgl-btn:after, .tgl-skewed + .tgl-btn:before {
     transform: skew(10deg);
@@ -88,13 +88,13 @@ html, body {
     content: attr(data-tg-off);
   }
   .tgl-skewed + .tgl-btn:active {
-    background: blue;
+    background: lavender;
   }
   .tgl-skewed + .tgl-btn:active:before {
     left: -10%;
   }
   .tgl-skewed:checked + .tgl-btn {
-    background: red;
+    background: lavender;
   }
   .tgl-skewed:checked + .tgl-btn:before {
     left: -100%;
