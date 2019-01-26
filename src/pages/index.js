@@ -63,7 +63,7 @@ class IndexPage extends Component {
             <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
               <Image />
             </div>
-            <Link to="/page-2/">Go to page 2</Link>
+            <Link style={{color: 'white'}}to="/page-2/">Go to page 2</Link>
           </StyledDiv>
         </Layout>
       </ThemeProvider>
