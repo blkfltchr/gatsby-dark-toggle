@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Dark Toggle`,
+    description: `A playground to figure out how to use a dark/light toggle with Gatsby.`,
+    author: `@blkfltcher @skidragon @timh1203`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
